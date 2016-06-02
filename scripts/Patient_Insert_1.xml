@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <changeSet id="1" author="vgrysh" context="first">
+		
+		<insert tableName="Person">
+          <column name="FirstName" value="John"/>
+          <column name="LastName" value="Smith"/>
+        </insert>
+		
+		<insert tableName="Person">
+          <column name="FirstName" value="Jane"/>
+          <column name="LastName" value="Smith"/>
+        </insert>
+		
+    </changeSet>
+	
+	<changeSet id="2" author="vgrysh" runAlways='true'>
+		
+		<insert tableName="Person">
+          <column name="FirstName" value="Kate"/>
+          <column name="LastName" value="Ivanova"/>
+        </insert>
+       
+	    <insert tableName="Person">
+          <column name="FirstName" value="Ivan"/>
+          <column name="LastName" value="Ivanov"/>
+        </insert>
+		
+    </changeSet>	
+	
+	<changeSet id="3" author="vgrysh" context="second">
+		
+		<insert tableName="Person">
+          <column name="FirstName" value="Pete"/>
+          <column name="LastName" value="White"/>
+        </insert>
+       
+	    <insert tableName="Person">
+          <column name="FirstName" value="Ada"/>
+          <column name="LastName" value="White"/>
+        </insert>
+		
+    </changeSet>
+
+</databaseChangeLog>
